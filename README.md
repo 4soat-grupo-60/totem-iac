@@ -1,12 +1,2 @@
-# iac-test
-# iac-test
-
-- OK Configurar usuário no github
-- Criar Action para executar o terraform
-- Injetar variáveis de ambiente de usuário para rodar o terraform
-- OK Cirar infraestrutura de rede (VPC, Subnet, Route Table, Security Group)
-- OK Criar as roles de EKS e Cluster
-- OK Cirar o cluster EKs
-- OK Criar o node
-- OK Criar o ECR
-- Criar o API gateway apontando para o EKS (https://antonputra.com/amazon/Integrate-amazon-api-gateway-with-amazon-eks/#deploy-app-to-kubernetes-and-expose-it-with-nlb)
+# Totem IAC
+Repositório com código para criação da infraestrutura necessária para a aplicação de totem executar no Amazon EKS.
