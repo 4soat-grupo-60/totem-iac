@@ -34,13 +34,14 @@ module "eks" {
   subnet_ids    = module.vpc.subnet_ids
 }
 
-module "api-gateway" {
-  source        = "./modules/api-gateway"
-  tags          = local.tags
-  region        = local.region
-  vpc_id        = module.vpc.vpc_id
-  subnet_ids    = module.vpc.subnet_ids
-}
+# O API gateway deve ser criado em um segundo commit após o deploy do k8s
+# module "api-gateway" {
+#   source        = "./modules/api-gateway"
+#   tags          = local.tags
+#   region        = local.region
+#   vpc_id        = module.vpc.vpc_id
+#   subnet_ids    = module.vpc.subnet_ids
+# }
 
 resource "aws_secretsmanager_secret" "db" {
   name        = "prod/totem/Postgresql/OLD"
@@ -98,6 +99,7 @@ resource "aws_iam_policy" "policy_secret_db" {
 
   tags = local.tags
 }
+
 terraform {
   cloud {
     organization = "4SOAT-G60"
