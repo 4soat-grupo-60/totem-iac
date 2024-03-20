@@ -98,3 +98,12 @@ resource "aws_iam_policy" "policy_secret_db" {
 
   tags = local.tags
 }
+terraform {
+  cloud {
+    organization = "4SOAT-G60"
+
+    workspaces {
+      name = "totem-iac"
+    }
+  }
+}
