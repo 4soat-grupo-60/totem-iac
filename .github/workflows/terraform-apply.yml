@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  TF_CLOUD_ORGANIZATION: "Grupo-G60-4SOAT-FIAP"
+  TF_CLOUD_ORGANIZATION: "4SOAT-G60"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}" # Para obter um Token siga as instruções em https://developer.hashicorp.com/terraform/tutorials/automation/github-actions#set-up-terraform-cloud
   TF_WORKSPACE: "totem-iac"
   CONFIG_DIRECTORY: "./"
