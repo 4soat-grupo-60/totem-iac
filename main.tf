@@ -34,6 +34,13 @@ module "eks" {
   subnet_ids    = module.vpc.subnet_ids
 }
 
+module "api-gateway" {
+  source        = "./modules/api-gateway"
+  tags          = local.tags
+  region        = local.region
+  vpc_id        = module.vpc.vpc_id
+  subnet_ids    = module.vpc.subnet_ids
+}
 
 resource "aws_secretsmanager_secret" "db" {
   name        = "prod/totem/Postgresql/OLD"
